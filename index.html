@@ -7,12 +7,66 @@
     <script>
      $(function (){
          
-         
+         $('#sub').click(function(){
+          var inputName = $('#name').val();
+          var inputBday = $('#birth').val();
+          var inputFavfood = $('#FavFood').val();
+          var backGroundimage = $('#FavFood').val();
+          if (backGroundimage == 'Mango'){
+          $('body').css('background-image','url("MangoBR.png")').css('background-repeat','no-repeat').css('background-size','120%');
+          }
+          else if (backGroundimage == 'Ice Cream'){
+          $('body').css('background-image','url("icecream.png")').css('background-repeat','no-repeat').css('background-size','200%');
+          }
+          else if (backGroundimage == 'French Fries'){
+          $('body').css('background-image','url("frenchFries.jpg")').css('background-repeat','no-repeat').css('background-size','160%');
+          }
+          else if (backGroundimage == 'Cake'){
+          $('body').css('background-image','url("cake.jpg")').css('background-repeat','no-repeat').css('background-size','200%');
+          $('h1').css('color',"white");
+          }
+          else if (backGroundimage == 'Salad'){
+          $('body').css('background-image','url("salad.jpg")').css('background-repeat','no-repeat').css('background-size','125%');
+          }
+            else if (backGroundimage == 'Pizza'){
+          $('body').css('background-image','url("Pizza.JPG")').css('background-repeat','no-repeat').css('background-size','100%');
+          }
+         $("p").hide(1000);
+         $("#name").hide(1000);
+         $('#birth').hide(1000);
+         $("#FavFood").hide(1000);
+         $("#sub").hide(1000);
+         $("h1").hide(1000);
+         $('#userName').html(inputName).css("text-align","center");
+         $('#userBday').html(inputBday).css("text-align","center");
+         $('#userFavFood').html("My favorite food is " + inputFavfood).css("text-align","center");
+         $("#userName").show(1000);
+         $("#userBday").show(1000);
+         $("#userFavFood").show(1000);
+         });
      });   
-        
     </script>
+   <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-  
+    <h1 id="userName"></h1>
+    <h1 id="userBday"></h1>
+    <h1 id="userFavFood"></h1>
+    <p>Name</p>
+  <input id="name" placeholder="John Cena">
+    <p>Date of Birth</p>
+    <input id="birth" placeholder= "April 23, 1977">
+    <br>
+   <p>Favorite Food</p>
+     <select id="FavFood">
+    <option value="Ice Cream" id="IC">Ice cream</option>
+  <option value="French Fries">French Fries</option>
+  <option value="Mango">Mango</option>
+  <option value="Cake">Cake</option>
+    <option value="Pizza">Pizza</option>
+      <option value="Salad">Salad</option>
+     </select>
+     <br>
+<input type="submit" id="sub">
   </body>
 </html>
