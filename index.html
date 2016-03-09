@@ -14,19 +14,23 @@
           var backGroundimage = $('#FavFood').val();
           if (backGroundimage == 'Mango'){
           $('body').css('background-image','url("MangoBR.png")').css('background-repeat','no-repeat').css('background-size','120%');
+          $('h1').css('color','#ffc34d');
           }
           else if (backGroundimage == 'Ice Cream'){
-          $('body').css('background-image','url("icecream.png")').css('background-repeat','no-repeat').css('background-size','200%');
+          $('body').css('background-image','url("icecream.png")').css('background-repeat','no-repeat').css('background-size','100%');
+          $('h1').css('color',"#80ffff");
           }
           else if (backGroundimage == 'French Fries'){
           $('body').css('background-image','url("frenchFries.jpg")').css('background-repeat','no-repeat').css('background-size','160%');
+          $('h1').css('color','#ff471a');
           }
           else if (backGroundimage == 'Cake'){
           $('body').css('background-image','url("cake.jpg")').css('background-repeat','no-repeat').css('background-size','200%');
-          $('h1').css('color',"white");
+          $('h1').css('color','white');
           }
           else if (backGroundimage == 'Salad'){
-          $('body').css('background-image','url("salad.jpg")').css('background-repeat','no-repeat').css('background-size','125%');
+          $('body').css('background-image','url("salad.jpg")').css('background-repeat','no-repeat').css('background-size','100%');
+          $('h1').css('color','#99ff99');
           }
             else if (backGroundimage == 'Pizza'){
           $('body').css('background-image','url("Pizza.JPG")').css('background-repeat','no-repeat').css('background-size','100%');
@@ -59,7 +63,7 @@
     <br>
    <p>Favorite Food</p>
      <select id="FavFood">
-    <option value="Ice Cream" id="IC">Ice cream</option>
+    <option value="ice cream" id="IC">Ice cream</option>
   <option value="French Fries">French Fries</option>
   <option value="Mango">Mango</option>
   <option value="Cake">Cake</option>

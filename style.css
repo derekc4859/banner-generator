@@ -7,3 +7,6 @@
     font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
     font-size: 18px;
       }
+      h1{
+          text-shadow: 0.25px 0.25px black;
+      }
