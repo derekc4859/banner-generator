@@ -1,75 +1,87 @@
 <!DOCTYPE html>
-<html>
 
+<html>
+  
 <head>
   <meta charset="UTF-8">
   <title>Banner Generator</title>
-  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-  <link rel="shortcut icon" href="salad.jpg">
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> <!-- Links jquery to html -->
+  <link rel="shortcut icon" href="salad.jpg">  <!-- Creates the shortcut icon for the tab-->
   <script>
     $(function() {
-
+      //This entire function would be triggered if the submit button is clicked
       $('#sub').click(function() {
-        var inputName = $('#name').val();
-        var inputBday = $('#birth').val();
-        var inputFavfood = $('#FavFood').val();
-        var backGroundimage = $('#FavFood').val();
+        var inputName = $('#name').val(); //variable of the user's input for their name
+        var inputBday = $('#birth').val();//variable of the user's input for their birthday
+        var inputFavfood = $('#FavFood').val(); // The favorite food of the user, will show up on the banner
+        var backGroundimage = $('#FavFood').val(); //Determines what is the background-image of the banner depending on the user's input
       
+        //If the user chooses mango, the background for the banner would be mango and the color of the text would be light-orange
         if (backGroundimage == 'mango') {
           $('body').css('background-image', 'url("MangoBR.png")').css('background-repeat', 'no-repeat').css('background-size', '120%');
           $('h1').css('color', '#ffc34d');
         }
+        
+        //If the user chooses ice cream, the background for the banner would be ice-cream and the color of the text would be sky blue
         else if (backGroundimage == 'ice cream') {
           $('body').css('background-image', 'url("icecream.png")').css('background-repeat', 'no-repeat').css('background-size', '100%');
           $('h1').css('color', "#80ffff");
         }
+        
+        //If the user chooses french fries, the background for the banner would be french-fries and the color of the text would be ketchup
         else if (backGroundimage == 'french fries') {
           $('body').css('background-image', 'url("frenchFries.jpg")').css('background-repeat', 'no-repeat').css('background-size', '160%');
           $('h1').css('color', '#ff471a');
         }
+        
+         //If the user chooses cake, the background for the banner would be cake and the color of the text would be frosting
         else if (backGroundimage == 'cake') {
           $('body').css('background-image', 'url("cake.jpg")').css('background-repeat', 'no-repeat').css('background-size', '200%');
           $('h1').css('color', 'white');
         }
+        
+        //If the user chooses salad  the background for the banner would be salad and the color of the text would be light-green
         else if (backGroundimage == 'salad') {
           $('body').css('background-image', 'url("salad.jpg")').css('background-repeat', 'no-repeat').css('background-size', '100%');
           $('h1').css('color', '#99ff99');
         }
+        
+         //If the user chooses pizza for their favorite food, the background for the banner would be pizza and the color of the text would be brown
         else if (backGroundimage == 'pizza') {
           $('body').css('background-image', 'url("Pizza.JPG")').css('background-repeat', 'no-repeat').css('background-size', '100%');
           $('h1').css('color', '#cc6600');
         }
-        $("p").hide(1000);
-        $("#name").hide(1000);
-        $('#birth').hide(1000);
-        $("#FavFood").hide(1000);
-        $("#sub").hide(1000);
-        $("h1").hide(1000);
-        $("h2").hide(1000);
-        $('#userName').html(inputName).css("text-align", "center");
-        $('#userBday').html(inputBday).css("text-align", "center");
-        $('#userFavFood').html("My favorite food is " + inputFavfood).css("text-align", "center");
-        $("#userName").show(1000);
-        $("#userBday").show(1000);
-        $("#userFavFood").show(1000);
+        $("p").hide(1000); //Hides anything that has the p tag
+        $("#name").hide(1000); //Hides name input
+        $('#birth').hide(1000); //Hides birth input
+        $("#FavFood").hide(1000); //Hides Favorite food selection
+        $("#sub").hide(1000); //Hides the submit button
+        $("h1").hide(1000); //Hides all H1s
+        $("h2").hide(1000); //Hides H2 tag
+        $('#userName').html(inputName).css("text-align", "center"); //aligns h1 with ID userName to be in the center and includes the user's input for their name
+        $('#userBday').html(inputBday).css("text-align", "center"); //aligns h1 with ID userBday to be in the center plus includes the user's input for their date of birth
+        $('#userFavFood').html("My favorite food is " + inputFavfood).css("text-align", "center"); //aligns h1 with ID userFavFood to be in the center and includes user's input for favorite food
+        $("#userName").show(1000); //Shows h1 with name
+        $("#userBday").show(1000); //Shows h1 with birthday
+        $("#userFavFood").show(1000); //Shows h1 with user's favorite food
       });
     });
   </script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css"> <!-- Links html to style sheet -->
 </head>
 
 <body>
-  <h1 id="userName"></h1>
-  <h1 id="userBday"></h1>
-  <h1 id="userFavFood"></h1>
-  <h2>Food Banner Generator</h2>
+  <h1 id="userName"></h1> <!-- Where the user's name would appear on their banner --> 
+  <h1 id="userBday"></h1> <!-- Where the user's DoB would appear on their banner -->
+  <h1 id="userFavFood"></h1> <!-- Where the user's favorite food would appear on their banner -->
+  <h2>Food Banner Generator</h2> <!-- The title of the webpage -->
   <p>Name</p>
-  <input id="name" placeholder="John Cena">
-  <p>Date of Birth</p>
-  <input id="birth" placeholder="April 23, 1977">
+  <input id="name" placeholder="John Cena"> <!-- inputs your name for the generator -->
+  <p>Date of Birth</p> 
+  <input id="birth" placeholder="April 23, 1977"> <!-- inputs user's DoB -->
   <br>
   <p>Favorite Food</p>
-  <select id="FavFood">
+  <select id="FavFood"> <!-- Options for user's favorite food -->
     <option value="ice cream">Ice Cream</option>
     <option value="french fries">French Fries</option>
     <option value="mango">Mango</option>
@@ -78,7 +90,7 @@
     <option value="salad">Salad</option>
   </select>
   <br>
-  <input type="submit" id="sub">
+  <input type="submit" id="sub"> <!-- Submits your responses in order to create your banner -->
 </body>
 
 </html>
